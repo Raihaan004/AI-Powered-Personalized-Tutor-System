@@ -37,6 +37,27 @@ const generationConfig = {
       },
     ],
   });
+  export const GenerateChapterContentAI = model.startChat({
+    generationConfig,
+    history: [
+      {
+        role: "user",
+        parts: [
+          {text: "Explain the concept in Detail on Topic: Decoration homes, Chapter: Introduction to Home Decor Styles in JSON Format with field as title, description in detail, Code Example(HTML Code format) if applicable"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "```json\n{\n  \"title\": \"Introduction to Home Decor Styles\",\n  \"description\": \"Home decoration, or interior design, is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space.  Different styles offer varied approaches to achieving this, each with distinct characteristics in color palettes, furniture choices, materials, and overall ambiance. Understanding these styles allows homeowners to personalize their living spaces to reflect their individual tastes and lifestyles. This introduction will touch upon several popular styles to illustrate the diversity of options available.  Choosing a style is a personal journey, often involving a blend of influences and preferences, rather than strict adherence to a single, rigid definition. The key is to create a space that is functional, comfortable, and visually appealing to its occupants.  Let's explore some prominent examples:\\n\\n**Key Aspects Considered Across Styles:**\\n\\n* **Color Palette:**  The range of colors used, from warm earth tones to cool blues and greens, significantly impacts the mood and feel of a room.  \\n* **Furniture:**  The type of furniture (e.g., antique, modern, minimalist) determines the style's visual impact. Size, shape, and material all play a role.\\n* **Materials:**  Choices in textiles (fabrics for curtains, upholstery), flooring (hardwood, carpet, tile), and wall coverings (paint, wallpaper) contribute to the texture and aesthetic.\\n* **Lighting:**  Natural light and artificial lighting arrangements greatly affect the ambiance.  The type and placement of lighting fixtures significantly shape the atmosphere.\\n* **Accessories:**  Artwork, decorative items, and other smaller elements add personality and complete the overall look.\\n\\n**Examples of Popular Styles (further detailed in subsequent chapters):**\\n\\n* **Modern:** Clean lines, minimalist aesthetic, functionality over ornamentation.\\n* **Traditional:** Classic elegance, ornate details, rich fabrics, symmetrical layouts.\\n* **Farmhouse:** Rustic charm, natural materials, vintage elements, a sense of warmth and simplicity.\\n* **Bohemian:** Eclectic mix of patterns, textures, and global influences, layered and comfortable.\\n* **Minimalist:** Uncluttered spaces, neutral color palettes, functionality as the core principle.\\n* **Mid-Century Modern:** Simple lines, organic shapes, functionality with a focus on quality materials.\",\n  \"codeExample\": \"<!--  This HTML is a simple example and doesn't represent a specific decor style. It's a placeholder for future, more detailed examples in subsequent chapters. -->\\n<html>\\n<head>\\n<title>Home Decor Example</title>\\n</head>\\n<body>\\n  <h1>My Living Room</h1>\\n  <p>This is a sample description of a living room.  More detailed descriptions will be provided in later sections, showing how different decor styles might be implemented.  For now, imagine your own furnishings and decor here!</p>\\n</body>\\n</html>\"\n}\n```\n"},
+        ],
+      },
+    ],
+  });
+
+  // const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
+  // console.log(result.response.text());
+
 
   // const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
   // console.log(result.response.text());
