@@ -8,7 +8,8 @@ import { storage } from '@/configs/firebaseConfig';
 import { db } from '@/configs/db';
 import { CourseList } from '@/configs/schema';
 import { eq } from 'drizzle-orm';
-function CourseBasicInfo({ course ,refreshData}) {
+import Link from 'next/link';
+function CourseBasicInfo({ course ,refreshData, edit=true}) {
   const [selectedFile,setSelectedFile]=useState();
 
   useEffect(()=>{
@@ -43,18 +44,19 @@ function CourseBasicInfo({ course ,refreshData}) {
     <div className='p-10 border rounded-xl shadow-sm mt-5'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
         <div>
-          <h2 className='font-bold text-3xl'>{course?.courseOutout?.courseName} <EditCourseBasicInfo course={course} refreshData={()=>refreshData(true)}/></h2>
+          <h2 className='font-bold text-3xl'>{course?.courseOutout?.courseName}{edit&& <EditCourseBasicInfo course={course} refreshData={()=>refreshData(true)}/>}</h2>
           <p className='text-sm text-gray-400 mt-3'>{course?.courseOutout?.description}</p>
           <div>
             <h2 className='font-medium mt-2 flex gap-2 items-center text-primary'><HiOutlinePuzzle />{course?.courseOutout?.category}</h2>
-            <Button className='w-full mt-5'>Start</Button>
+            {!edit && <Link href={'/course/'+course?.courseId+'/start'}>
+            <Button className='w-full mt-5'>Start</Button></Link>}
           </div>
         </div>
         <div>
           <label htmlFor='upload-image'>
           <Image src={selectedFile?selectedFile:'/placeholder.png'} width={300} height={300} className='w-full rounded-xl h-[250px] object-cover cursor-pointer' alt='image not working'/>
           </label>
-          <input type='file' id='upload-image'className='opacity-0' onChange={onFileSelected} />
+          {edit && <input type='file' id='upload-image'className='opacity-0' onChange={onFileSelected} />}
         </div>
       </div>
       
