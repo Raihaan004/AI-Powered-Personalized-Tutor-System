@@ -8,7 +8,7 @@ function Header() {
     <div className='flex justify-between p-5 shadow-sm'>
       
         <Image src ={'/logo.svg'} width={150} height={100}/>
-        <Link href="http://localhost:3000/dashboard">
+        <Link href="/dashboard">
         <Button>Get Started</Button>
         </Link>
     </div>
