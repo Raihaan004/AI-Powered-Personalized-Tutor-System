@@ -8,7 +8,7 @@ function Header() {
     <div className='flex justify-between p-5 shadow-sm'>
       
         <Image src ={'/logo.svg'} width={150} height={100}/>
-        <Link href="/dashboard">
+        <Link href="https://ai-powered-personalized-tutor-system.vercel.app/dashboard">
         <Button>Get Started</Button>
         </Link>
     </div>
