@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Hero() {
@@ -6,7 +7,7 @@ function Hero() {
   <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:items-center">
     <div className="mx-auto max-w-xl text-center">
       <h1 className="text-3xl font-extrabold sm:text-5xl text-primary">
-        AI Course Generator
+        EduCraft AI
         <strong className="font-extrabold text-black sm:block"> Custom Learning Paths, Powered by AI </strong>
       </h1>
 
@@ -18,9 +19,10 @@ function Hero() {
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <a
           className="block w-full rounded-sm bg-primary px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-red-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-          href="#"
+          href="http://localhost:3000/dashboard"
         >
-          Get Started
+          <Link href="http://localhost:3000/dashboard">
+          Get Started </Link>
         </a>
       </div>
     </div>

@@ -77,7 +77,7 @@ function CourseLayout({ params }) {
       <CourseDetail course={course} />
       {/**List of Lessons */}
       <ChapterList course={course} refreshData={() => GetCourse()} />
-      <Button className='my-10' onClick={GenerateChapterLayout}>Generate Course Layout</Button>
+      <Button className='my-10' onClick={GenerateChapterLayout}>Generate Course</Button>
     </div>
   )
 }
