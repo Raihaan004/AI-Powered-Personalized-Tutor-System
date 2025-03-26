@@ -4,12 +4,12 @@ export default function Page() {
   return (
 
 
-    <section className="bg-white">
+    <section className="bg-gradient-to-r from-gray-100 to-gray-200">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
         <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
           <img
             alt=""
-            src="https://images.pexels.com/photos/17486100/pexels-photo-17486100/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-represents-storage-of-collected-data-in-ai-it-was-created-by-wes-cockx-as-part-of-the-visualising-ai-project-launched.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzBuZXc1cnF2OG1hdTQ3dzNraGJyZjBxdGVtcW93Z3J3OWd3OXlwdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif"
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           />
 
