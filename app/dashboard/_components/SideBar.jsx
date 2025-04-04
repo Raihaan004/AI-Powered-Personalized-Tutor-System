@@ -13,7 +13,7 @@ function SideBar() {
     const { signOut } = useClerk();
     const router = useRouter();
     const path = usePathname();
-    
+    // path to change
     const Menu=[
         {
             id: 1,
