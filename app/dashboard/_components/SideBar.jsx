@@ -31,7 +31,7 @@ function SideBar() {
             id: 3,
             name: 'Test',
             icon: <HiOutlineShieldCheck />,
-            path: 'https://vercel.com/mohammed-raihaans-projects/ai-interview-mocker/B6KdQu6XR2NBrZSTUbbiwMmxcxdP/dashboard'
+            path: ' http://localhost:3001/dashboard'
         }
     ]
     
