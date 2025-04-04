@@ -19,7 +19,18 @@ function CourseCard({course, refreshData, displayUser=false}) {
   return (
     <div className='shadow-sm rounded-lg border p-2  cursor-pointer mt-4 hover:border-primary'>
         <Link href={'/course/'+course?.courseId}>
-        <Image src={course?.courseBanner} width={300} height={200} className='w-full h-[200px] object-cover rounded-lg'/></Link>
+        <Image       src={[
+        '/gradient-1.gif',
+        '/gradient-2.gif',
+        '/gradient-3.gif',
+        '/gradient-4.gif',
+        '/gradient-5.gif',
+        '/gradient-6.gif',
+        '/gradient-7.gif',
+        '/gradient-8.gif'
+      ][Math.floor(Math.random()*8)]} 
+      width={300} 
+      height={300} className='w-full h-[200px] object-cover rounded-lg'/></Link>
         <div className='p-2'>
             <h2 className='font-medium text-lg flex justify-between items-center'>{course?.courseOutout?.courseName}{!displayUser && <DropdownOption handleOnDelete={()=>handleOnDelete()}><HiMiniEllipsisVertical /></DropdownOption>}</h2>
             <p className='text-sm text-gray-400 my-1'>{course?.category}</p>

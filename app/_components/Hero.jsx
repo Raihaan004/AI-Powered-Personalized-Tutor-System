@@ -19,9 +19,9 @@ function Hero() {
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <a
           className="block w-full rounded-sm bg-primary px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-red-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-          href="https://ai-powered-personalized-tutor-system.vercel.app/dashboard"
+          href="http://localhost:3000/dashboard"
         >
-          <Link href={'https://ai-powered-personalized-tutor-system.vercel.app/dashboard'}>
+          <Link href={'http://localhost:3000/dashboard'}>
           Get Started </Link>
         </a>
       </div>
